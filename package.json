@@ -14,15 +14,25 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
   },
   "dependencies": {
     "keymaster": "^1.6.2"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.69",
+    "gts": "^0.8.0",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.3",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "typescript": "^2.9.2"
   }
 }
